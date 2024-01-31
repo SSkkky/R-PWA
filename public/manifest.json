@@ -3,13 +3,13 @@
   "name": "Create React App Sample",
   "screenshots": [
     {
-      "src": "icons/nongdam.jpg",
+      "src": "./icons/nongdam.jpg",
       "type": "image/jpg",
       "sizes": "2048x1372",
       "form_factor": "narrow"
     },
     {
-      "src": "icons/nongdam.jpg",
+      "src": "./icons/nongdam.jpg",
       "type": "image/jpg",
       "sizes": "2048x1372",
       "form_factor": "wide"
@@ -17,46 +17,29 @@
   ],
   "icons": [
     {
-      "src": "icons/favicon.ico",
+      "src": "./icons/favicon-16x16.png",
       "sizes": "16x16",
-      "type": "favicon/ico",
-      "form_factor": "wide",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
-      "src": "icons/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "favicon-16x16/png",
-      "form_factor": "wide",
-      "purpose": "any"
-    },
-    {
-      "src": "icons/favicon-32x32.png",
+      "src": "./icons/favicon-32x32.png",
       "sizes": "32x32",
-      "type": "favicon-32x32/png",
-      "form_factor": "wide",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
-      "src": "icons/favicon-96x96.png",
+      "src": "./icons/favicon-96x96.png",
       "sizes": "96x96",
-      "type": "favicon-96x96/png",
-      "form_factor": "wide",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
-      "src": "icons/android-icon-144x144.png",
+      "src": "./icons/android-icon-144x144.png",
       "sizes": "144x144",
-      "type": "android-icon-144x144/png",
-      "form_factor": "wide",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
-      "src": "icons/icon-512x512.png",
+      "src": "./icons/icon-512x512.png",
       "sizes": "512x512",
-      "type": "icon-512x512/png",
-      "form_factor": "wide",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ],
   "start_url": ".",
