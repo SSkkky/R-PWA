@@ -23,10 +23,8 @@ function App() {
 
 
 
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <img src='https://media.tenor.com/8gq2h5eWeJAAAAAi/jokebear-%EB%86%8D%EB%8B%B4%EA%B3%B0.gif' alt="logo" />
+        <p>알림 테스트</p>
         <a
           className="App-link"
           href="https://reactjs.org"
