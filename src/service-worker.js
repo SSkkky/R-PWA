@@ -87,11 +87,13 @@ self.addEventListener('message', (event) => {
 
 
 self.addEventListener('notificationclick', (event) => {
-  if (event.action == 'open') {// 자세히보기
-    window.open('https://www.naver.com');
-  } else {//닫기
-    event.notification.close();
-  }
+  self.clients.matchAll().then(function (clientList) {
+    if (event.action == 'open') {
+      clients.openWindow('https://www.naver.com');
+    } else {//닫기
+      event.notification.close();
+    }
+  })
 })
 
 // Any other custom service worker logic can go here.
