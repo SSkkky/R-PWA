@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/icons/favicon.ico" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
@@ -40,13 +40,20 @@
     -->
 
   <script>
+
     return;
-    navigator.serviceWorker.register('sw.js')
-      .then(res => {
-        //console.log('서비스워커 등록 완료!!!')
-        //console.log(res)
-      })
+    if ('navigator' in window) {
+      navigator.serviceWorker.register('sw.js')
+        .then(res => {
+          //console.log('서비스워커 등록 완료!')
+          //console.log(res);
+        })
+    }
+
   </script>
+
+
+
 </body>
 
 </html>

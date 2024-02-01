@@ -69,11 +69,31 @@ registerRoute(
 //   }
 // });
 
-self.addEventListener('message', (e) => {
-  console.log('메시지', e.data);
-  self.registration.showNotification('title', {
-    body: e.data.message
-  });
+self.addEventListener('message', (event) => {
+  console.log('메세지가?....', event.data);
+  const option = {
+    body: event.data.message,
+    icon: '1.png',
+    image: '2.png', // 내용 썸네일
+    badge: '3.png',
+    vibrate: [200, 100, 300],
+    actions: [
+      { action: 'open', title: '자세히보기' },
+      { action: 'close', title: '닫기' },
+    ]
+  }
+  self.registration.showNotification('title', option);
+})
+
+
+self.addEventListener('notificationclick', (event) => {
+  console.log(event, '<---event')
+  console.log(clients, '<---clients')
+  if (event.action == 'open') {// 자세히보기
+    clients.openWindow('https://www.naver.com');
+  } else {//닫기
+    event.notification.close();
+  }
 })
 
 // Any other custom service worker logic can go here.
