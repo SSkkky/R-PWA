@@ -88,7 +88,7 @@ self.addEventListener('message', (event) => {
 
 self.addEventListener('notificationclick', (event) => {
   if (event.action == 'open') {// 자세히보기
-    clients.openWindow('https://www.naver.com');
+    window.open('https://www.naver.com');
   } else {//닫기
     event.notification.close();
   }
