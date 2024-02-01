@@ -30,11 +30,13 @@ self.addEventListener('message', (event) => {
 
 
 self.addEventListener('notificationclick', (event) => {
-    // console.log(event, '<---event')
-    // console.log(clients, '<---clients')
-    if (event.action == 'open') {// 자세히보기
-        clients.openWindow('https://www.naver.com');
-    } else {//닫기
-        event.notification.close();
-    }
+    event.waitUntil(
+        self.clients.matchAll().then(function (clientList) {
+            if (event.action == 'open') {
+                return self.clients.openWindow('https://www.naver.com');
+            } else {//닫기
+                return event.notification.close();
+            }
+        })
+    )
 })
