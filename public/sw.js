@@ -1,9 +1,11 @@
 // sw.js
-self.addEventListener('install', () => {
+self.addEventListener('install', (event) => {
     console.log('설치완료')
+    event.waitUntil(self.skipWaiting());
 })
 
-self.addEventListener('activate', () => {
+self.addEventListener('activate', (event) => {
+    event.waitUntil(self.clients.claim());
     console.log('서비스워커 동작 시작되고 있음...')
 })
 
@@ -12,10 +14,9 @@ self.addEventListener('fetch', () => {
 })
 
 
-self.addEventListener('message', (event) => {
-    console.log('메세지가?....', event.data);
+self.addEventListener('push', (event) => {
     const option = {
-        body: event.data.message,
+        body: '??',
         icon: '1.png',
         image: '2.png', // 내용 썸네일
         badge: '3.png',
